@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "type": "object",
+  "properties": {
+    "Id": {"type": "integer"},
+    "Content": {"type": "string"},
+    "ItemsCount": {"type": "integer"},
+    "Icon": {"type": "integer"},
+    "ItemType": {"type": "integer"},
+    "Collapsed": {"type": "boolean"},
+    "ItemOrder": {"type": "integer"},
+    "IsProjectShared": {"type": "boolean"},
+    "IsShareApproved": {"type": "boolean"},
+    "Children": {"type": "array"},
+    "IsOwnProject": {"type": "boolean"},
+    "LastSyncedDateTime": {"type": "string"},
+    "LastUpdatedDate": {"type": "string"},
+    "Deleted": {"type": "boolean"}
+  }
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - CucumberRunner</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>CucumberRunner</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/runner.html">runner</a> &gt; CucumberRunner</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">3.111s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Create, Read, Update and Delete (CRUD) a Project</td>
+<td class="success">3.111s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+@one
+Scenario: Create, Read, Update and Delete (CRUD) a Project                                  ?[90m# src/test/resources/ApiDemo.feature:4?[0m
+  ?[32mGiven ?[0m?[32mI have access to App ?[0m?[32m?[1m&quot;https://todo.ly/&quot;?[0m                                             ?[90m# steps.MyStepdefs.IhaveAccessToApp(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI send a POST request to ?[0m?[32m?[1m&quot;http://todo.ly/api/projects.json&quot;?[0m?[32m using the body?[0m           ?[90m# steps.MyStepdefs.IsendPOSTrequestUsingBody(java.lang.String,java.lang.String)?[0m
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/8.0
+Set-Cookie: ASP.NET_SessionId=gpi3szeb2afhbh1zx2rbnp2q; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Mon, 20 May 2024 18:54:03 GMT
+Content-Length: 398
+
+{
+    &quot;Id&quot;: 4223183,
+    &quot;Content&quot;: &quot;Project X&quot;,
+    &quot;ItemsCount&quot;: 0,
+    &quot;Icon&quot;: 2,
+    &quot;ItemType&quot;: 2,
+    &quot;ParentId&quot;: null,
+    &quot;Collapsed&quot;: false,
+    &quot;ItemOrder&quot;: 48,
+    &quot;Children&quot;: [
+        
+    ],
+    &quot;IsProjectShared&quot;: false,
+    &quot;ProjectShareOwnerName&quot;: null,
+    &quot;ProjectShareOwnerEmail&quot;: null,
+    &quot;IsShareApproved&quot;: false,
+    &quot;IsOwnProject&quot;: true,
+    &quot;LastSyncedDateTime&quot;: &quot;/Date(1716231243061)/&quot;,
+    &quot;LastUpdatedDate&quot;: &quot;/Date(1716231243047)/&quot;,
+    &quot;Deleted&quot;: false,
+    &quot;SyncClientCreationId&quot;: null
+}
+  ?[32mThen ?[0m?[32mThe Status Code should be ?[0m?[32m?[1m200?[0m                                                        ?[90m# steps.MyStepdefs.TheStatusCodeShouldBe(java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mThe Content should be ?[0m?[32m?[1m&quot;Project X&quot;?[0m                                                    ?[90m# steps.MyStepdefs.TheContentShouldBe(java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mThe Icon should be ?[0m?[32m?[1m2?[0m                                                                 ?[90m# steps.MyStepdefs.TheIconShouldBe(java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mI verify the Schema using jsonSchemaFactory?[0m                                          ?[90m# steps.MyStepdefs.IverifyTheSchema()?[0m
+  ?[32mAnd ?[0m?[32mI capture the Project ID into a variable?[0m                                              ?[90m# steps.MyStepdefs.IcaptureProjectIdIntoVariable()?[0m
+  ?[32mWhen ?[0m?[32mI send a PUT request to ?[0m?[32m?[1m&quot;http://todo.ly/api/projects/ID_PROYECT.json&quot;?[0m?[32m using the body?[0m ?[90m# steps.MyStepdefs.IsendPUTrequestUsingBody(java.lang.String,java.lang.String)?[0m
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/8.0
+Set-Cookie: ASP.NET_SessionId=vfogx0fej1dapbjmwuygussb; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Mon, 20 May 2024 18:54:04 GMT
+Content-Length: 405
+
+{
+    &quot;Id&quot;: 4223183,
+    &quot;Content&quot;: &quot;Project X Update&quot;,
+    &quot;ItemsCount&quot;: 0,
+    &quot;Icon&quot;: 4,
+    &quot;ItemType&quot;: 2,
+    &quot;ParentId&quot;: null,
+    &quot;Collapsed&quot;: false,
+    &quot;ItemOrder&quot;: 48,
+    &quot;Children&quot;: [
+        
+    ],
+    &quot;IsProjectShared&quot;: false,
+    &quot;ProjectShareOwnerName&quot;: null,
+    &quot;ProjectShareOwnerEmail&quot;: null,
+    &quot;IsShareApproved&quot;: false,
+    &quot;IsOwnProject&quot;: true,
+    &quot;LastSyncedDateTime&quot;: &quot;/Date(1716231244262)/&quot;,
+    &quot;LastUpdatedDate&quot;: &quot;/Date(1716231244263)/&quot;,
+    &quot;Deleted&quot;: false,
+    &quot;SyncClientCreationId&quot;: null
+}
+  ?[32mThen ?[0m?[32mThe Status Code should be ?[0m?[32m?[1m200?[0m                                                        ?[90m# steps.MyStepdefs.TheStatusCodeShouldBe(java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mThe Content should be ?[0m?[32m?[1m&quot;Project X Update&quot;?[0m                                             ?[90m# steps.MyStepdefs.TheContentShouldBe(java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mThe Icon should be ?[0m?[32m?[1m4?[0m                                                                 ?[90m# steps.MyStepdefs.TheIconShouldBe(java.lang.Integer)?[0m
+  ?[32mWhen ?[0m?[32mI send a DELETE request to ?[0m?[32m?[1m&quot;http://todo.ly/api/projects/ID_PROYECT.json&quot;?[0m             ?[90m# steps.MyStepdefs.IsendDELETErequest(java.lang.String)?[0m
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/8.0
+Set-Cookie: ASP.NET_SessionId=2bgiqmhmedvl1mrbxothutus; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Mon, 20 May 2024 18:54:04 GMT
+Content-Length: 404
+
+{
+    &quot;Id&quot;: 4223183,
+    &quot;Content&quot;: &quot;Project X Update&quot;,
+    &quot;ItemsCount&quot;: 0,
+    &quot;Icon&quot;: 4,
+    &quot;ItemType&quot;: 2,
+    &quot;ParentId&quot;: null,
+    &quot;Collapsed&quot;: false,
+    &quot;ItemOrder&quot;: 48,
+    &quot;Children&quot;: [
+        
+    ],
+    &quot;IsProjectShared&quot;: false,
+    &quot;ProjectShareOwnerName&quot;: null,
+    &quot;ProjectShareOwnerEmail&quot;: null,
+    &quot;IsShareApproved&quot;: false,
+    &quot;IsOwnProject&quot;: true,
+    &quot;LastSyncedDateTime&quot;: &quot;/Date(1716231244668)/&quot;,
+    &quot;LastUpdatedDate&quot;: &quot;/Date(1716231244653)/&quot;,
+    &quot;Deleted&quot;: true,
+    &quot;SyncClientCreationId&quot;: null
+}
+  ?[32mThen ?[0m?[32mThe Status Code should be ?[0m?[32m?[1m200?[0m                                                        ?[90m# steps.MyStepdefs.TheStatusCodeShouldBe(java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mThe flag Deleted should be ?[0m?[32m?[1m&quot;true&quot;?[0m                                                    ?[90m# steps.MyStepdefs.TheIconShouldBe(java.lang.String)?[0m
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.4</a> at May 20, 2024, 1:54:03 PM</p>
+</div>
+</div>
+</body>
+</html>

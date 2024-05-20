@@ -1,0 +1,122 @@
+
+@one
+åScenario: Create, Read, Update and Delete (CRUD) a Project                                  [90m# src/test/resources/ApiDemo.feature:4[0m
+∫  [32mGiven [0m[32mI have access to App [0m[32m[1m"https://todo.ly/"[0m                                             [90m# steps.MyStepdefs.IhaveAccessToApp(java.lang.String)[0m
+›  [32mWhen [0m[32mI send a POST request to [0m[32m[1m"http://todo.ly/api/projects.json"[0m[32m using the body[0m           [90m# steps.MyStepdefs.IsendPOSTrequestUsingBody(java.lang.String,java.lang.String)[0m
+HTTP/1.1 200 OK
+3Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+.Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/8.0
+WSet-Cookie: ASP.NET_SessionId=gpi3szeb2afhbh1zx2rbnp2q; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+$Date: Mon, 20 May 2024 18:54:03 GMT
+Content-Length: 398
+
+{
+    "Id": 4223183,
+    "Content": "Project X",
+    "ItemsCount": 0,
+    "Icon": 2,
+    "ItemType": 2,
+    "ParentId": null,
+    "Collapsed": false,
+    "ItemOrder": 48,
+    "Children": [
+	        
+    ],
+    "IsProjectShared": false,
+#    "ProjectShareOwnerName": null,
+$    "ProjectShareOwnerEmail": null,
+    "IsShareApproved": false,
+    "IsOwnProject": true,
+3    "LastSyncedDateTime": "/Date(1716231243061)/",
+0    "LastUpdatedDate": "/Date(1716231243047)/",
+    "Deleted": false,
+!    "SyncClientCreationId": null
+}
+¿  [32mThen [0m[32mThe Status Code should be [0m[32m[1m200[0m                                                        [90m# steps.MyStepdefs.TheStatusCodeShouldBe(java.lang.Integer)[0m
+º  [32mThen [0m[32mThe Content should be [0m[32m[1m"Project X"[0m                                                    [90m# steps.MyStepdefs.TheContentShouldBe(java.lang.String)[0m
+∫  [32mThen [0m[32mThe Icon should be [0m[32m[1m2[0m                                                                 [90m# steps.MyStepdefs.TheIconShouldBe(java.lang.Integer)[0m
+ù  [32mThen [0m[32mI verify the Schema using jsonSchemaFactory[0m                                          [90m# steps.MyStepdefs.IverifyTheSchema()[0m
+™  [32mAnd [0m[32mI capture the Project ID into a variable[0m                                              [90m# steps.MyStepdefs.IcaptureProjectIdIntoVariable()[0m
+‹  [32mWhen [0m[32mI send a PUT request to [0m[32m[1m"http://todo.ly/api/projects/ID_PROYECT.json"[0m[32m using the body[0m [90m# steps.MyStepdefs.IsendPUTrequestUsingBody(java.lang.String,java.lang.String)[0m
+HTTP/1.1 200 OK
+3Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+.Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/8.0
+WSet-Cookie: ASP.NET_SessionId=vfogx0fej1dapbjmwuygussb; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+$Date: Mon, 20 May 2024 18:54:04 GMT
+Content-Length: 405
+
+{
+    "Id": 4223183,
+#    "Content": "Project X Update",
+    "ItemsCount": 0,
+    "Icon": 4,
+    "ItemType": 2,
+    "ParentId": null,
+    "Collapsed": false,
+    "ItemOrder": 48,
+    "Children": [
+	        
+    ],
+    "IsProjectShared": false,
+#    "ProjectShareOwnerName": null,
+$    "ProjectShareOwnerEmail": null,
+    "IsShareApproved": false,
+    "IsOwnProject": true,
+3    "LastSyncedDateTime": "/Date(1716231244262)/",
+0    "LastUpdatedDate": "/Date(1716231244263)/",
+    "Deleted": false,
+!    "SyncClientCreationId": null
+}
+¿  [32mThen [0m[32mThe Status Code should be [0m[32m[1m200[0m                                                        [90m# steps.MyStepdefs.TheStatusCodeShouldBe(java.lang.Integer)[0m
+º  [32mThen [0m[32mThe Content should be [0m[32m[1m"Project X Update"[0m                                             [90m# steps.MyStepdefs.TheContentShouldBe(java.lang.String)[0m
+∫  [32mThen [0m[32mThe Icon should be [0m[32m[1m4[0m                                                                 [90m# steps.MyStepdefs.TheIconShouldBe(java.lang.Integer)[0m
+º  [32mWhen [0m[32mI send a DELETE request to [0m[32m[1m"http://todo.ly/api/projects/ID_PROYECT.json"[0m             [90m# steps.MyStepdefs.IsendDELETErequest(java.lang.String)[0m
+HTTP/1.1 200 OK
+3Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+.Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/8.0
+WSet-Cookie: ASP.NET_SessionId=2bgiqmhmedvl1mrbxothutus; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+$Date: Mon, 20 May 2024 18:54:04 GMT
+Content-Length: 404
+
+{
+    "Id": 4223183,
+#    "Content": "Project X Update",
+    "ItemsCount": 0,
+    "Icon": 4,
+    "ItemType": 2,
+    "ParentId": null,
+    "Collapsed": false,
+    "ItemOrder": 48,
+    "Children": [
+	        
+    ],
+    "IsProjectShared": false,
+#    "ProjectShareOwnerName": null,
+$    "ProjectShareOwnerEmail": null,
+    "IsShareApproved": false,
+    "IsOwnProject": true,
+3    "LastSyncedDateTime": "/Date(1716231244668)/",
+0    "LastUpdatedDate": "/Date(1716231244653)/",
+    "Deleted": true,
+!    "SyncClientCreationId": null
+}
+¿  [32mThen [0m[32mThe Status Code should be [0m[32m[1m200[0m                                                        [90m# steps.MyStepdefs.TheStatusCodeShouldBe(java.lang.Integer)[0m
+π  [32mThen [0m[32mThe flag Deleted should be [0m[32m[1m"true"[0m                                                    [90m# steps.MyStepdefs.TheIconShouldBe(java.lang.String)[0m
