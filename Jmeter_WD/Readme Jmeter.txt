@@ -11,6 +11,6 @@ System Under Test: a Web page call https://todo.ly/
 -> It helps you to get organized, simplify your life, and to get things done.
 -> In difference with Swagger PetStore, offers not only API's documentation, also a very intuitive UI, to perform an exhaustive testing.
 
-Test Cases: Deep validations on POST, PUT, DELETE and the Schema\
+Test Cases: Deep validations on POST, PUT, DELETE and the Schema
 
 ** Were included Assertions, Extractors, Pre/Post Processors, and Listeners to have an In Built Reports. 
